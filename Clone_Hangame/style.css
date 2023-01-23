@@ -1,3 +1,77 @@
-* {
+:root {
     
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar:hover {
+    background-color: white;
+}
+
+.section_nav_top {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 30px;
+}
+
+.navbar_topmenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 5px;
+    background-color: grey;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+.section_nav_game {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 30px;
+}
+
+.navbar_logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: orange;
+}
+
+.navbar_gamemenu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar_topmenu li {
+    margin-left: 10px;
+}
+
+.navbar_gamemenu li {
+    margin-right: 20px
+}
+
+.login_button {
+    padding: 10px 25px;
+    border-radius: 20px;
+    border-style: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
 }
