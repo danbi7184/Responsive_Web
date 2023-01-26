@@ -5,6 +5,12 @@
   --black-light-color: #15082C;
   --grey-light-color: #D5D5D5;
   --red-color: #FF3E4A;
+  --yellow-color: #FFCF00;
+  --pink-color: #FE8987;
+  --blue-color: #2D5EB7;
+  --blue-light-color: #4ABBE5;
+  --blue-dark-color: #1C1F41;
+
 
   /* Size */
   --padding-section: 28rem;
@@ -39,11 +45,11 @@ li {
 }
 
 body {
-  font-family: 'Nanum Gothic', sans-serif;;
+  font-family: 'Nanum Gothic', sans-serif, 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
   background: linear-gradient(transparent, 85%, white), url('img/background.png');
   /* background-image: url('img/background.png'); */
   background-repeat: no-repeat;
-  background-size: 100%, 100%;
+  background-size: contain;
 }
 
 a {
@@ -57,6 +63,7 @@ a {
 }
 .navbar:hover {
   background-color: var(--white-color);
+  transition: background-color 0.5s;
 }
 
 .navbar:hover .section_nav_top .navbar_topmenu a,
@@ -97,6 +104,7 @@ a {
 
 .navbar .section_nav_top .navbar_topmenu li:last-child::after {
   content: "";
+  margin-right: 0;
 }
 
 .navbar .section_nav_top .navbar_topmenu a {
@@ -178,28 +186,78 @@ a {
 
 .section_popular .game_content li {
   color: var(--white-color);
+  font-weight: bold;
 }
 
 .section_popular .game_content li ul {
+  position: relative;
   width: 200px;
   height: 230px;
-  background-color: var(--grey-light-color);
   margin: 0 var(--margin-medium);
   border-radius: var(--radius-medium);
+  box-shadow: var(--font-medium) var(--font-medium) var(--font-medium) var(--blue-dark-color);
 }
 
-.section_popular .game_content .popular_first {
-
+.section_popular .game_content li ul:hover {
+  transform: translateY(-20px);
+  transition: transform 0.5s;
 }
 
 .section_popular .game_content li .popular_icon {
+  position: relative;
+  left: var(--margin-large);
+  top: calc(var(--margin-medium) * 1.5);
   width: 20%;
   background-color: var(--red-color);
   padding: var(--padding-micro);
-  margin-left: var(--margin-large);
   border-radius: var(--radius-medium);
   font-size: var(--font-micro);
   text-align: center;
+}
+
+.section_popular .game_content li .game_name {
+  position: relative;
+  left: var(--margin-large);
+  top: calc(var(--margin-large) + var(--margin-small));
+  font-size: 1.5rem;
+}
+
+.section_popular .game_content li .game_info {
+  position: relative;
+  left: var(--margin-large);
+  top: calc(var(--margin-large) + var(--margin-medium) * 1.5);
+  font-size: calc(var(--font-medium) * 0.8);
+}
+
+.section_popular .game_content li .game_image {
+  position: relative;
+  left: 25%;
+  top: calc(var(--margin-large) * 3);
+  font-size: calc(var(--font-large) * 4.5);
+}
+
+.section_popular .game_content .popular_first {
+  background-color: var(--yellow-color);
+}
+
+.section_popular .game_content .popular_second {
+  background-color: var(--blue-light-color);
+}
+
+.section_popular .game_content .popular_third {
+  background-color: var(--pink-color);
+}
+
+.section_popular .game_content .popular_fourth {
+  background-color: var(--blue-color);
+}
+
+.section_popular .game_content .popular_fifth {
+  background-color: var(--blue-dark-color);
+}
+
+.section_popular .game_content .popular_fifth .popular_icon {
+  width: 27%;
 }
 
 /* Poker */
@@ -215,4 +273,8 @@ a {
 /* Board */
 .section_board {
 
+}
+
+@media screen and (max-width: 768px) {
+  
 }
